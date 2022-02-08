@@ -1,0 +1,47 @@
+/* You can add global styles to this file, and also import other style files */
+.contenedor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lavender;
+}
+
+.home{
+    width: 800px;
+}
+
+.datos{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 100px;
+    height: 250px;
+    width: 500px;
+    border-radius: 50px;
+    border-style: solid;
+    border-color: black;
+}
+
+.dato-aqi{
+    background-color: #f0edeb;
+}
+.dato-50{
+    background-color: #47C721;
+}
+.dato-100{
+    background-color: #FBFF07;
+}
+.dato-150{
+    background-color: #EA8B0A;
+}
+.dato-200{
+    background-color: #EA0A40;
+}
+.dato-300{
+    background-color: #A309CC;
+}
+.dato-fin{
+    background-color: #960050;
+}

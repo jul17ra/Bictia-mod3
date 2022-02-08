@@ -1,0 +1,23 @@
+<div class="home">
+    <h1 class="text-center">Fontibón</h1>
+    <br>
+    <div class="container text-center">
+        <div class="card text-center">
+            <div class="card-header">
+                Air Quality Index Service
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Medición de Material particulado 2.5 (PM2.5)</h5>
+                <br>
+                <div class="datos" [ngClass]="{'dato-50': this.aqi <= 50, 'dato-100': this.aqi > 50 && this.aqi <= 100, 'dato-150': this.aqi > 100 && this.aqi <= 150, 'dato-200': this.aqi > 150 && this.aqi <= 200, 'dato-300': this.aqi > 200 && this.aqi <= 300, 'dato-fin': this.aqi > 300, 'dato-aqi': this.aqi == 'Sin datos'}">
+                    <p class="card-text">{{aqi}}</p>
+                </div>
+                <br>
+                <button class="btn btn-success btn-lg btn-block" (click)="getAQI()" [disabled]="lockButton">OBTENER MEDICIÓN</button>
+            </div>
+            <div class="card-footer text-muted">
+                {{date.toLocaleString()}}
+            </div>
+        </div>
+    </div>
+</div>
