@@ -1,1 +1,149 @@
-<p>home works!</p>
+<!--====== BEST SELLERS PART START ======-->
+
+<section id="features" class="services-area pt-120">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="section-title text-center pb-40">
+                    <div class="line m-auto"></div>
+                    <h3 class="title">BEST SELLERS !<span> know each one of them</span></h3>
+                </div> <!-- section title -->
+            </div>
+        </div> <!-- row -->
+        <div class="row justify-content-center">
+            <div class="col-lg-4 col-md-7 col-sm-8">
+                <div class="single-services text-center mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
+                    <div class="services-icon">
+                        <img class="shape" src="assets/images/services-shape.svg" alt="shape">
+                        <img class="shape-1" src="assets/images/services-shape-1.svg" alt="shape">
+                        <i class="lni-baloon"></i>
+                    </div>
+                    <div class="services-content mt-30">
+                        <h4 class="services-title"><a href="#">House 1</a></h4>
+                        <p class="text">Lorem ipsum dolor sit amet,consetetur sadipscing elitr, seddiam nonu eirmod
+                            tempor invidunt labore.</p>
+                        <a class="more" href="#">Learn More <i class="lni-chevron-right"></i></a>
+                    </div>
+                </div> <!-- single services -->
+            </div>
+            <div class="col-lg-4 col-md-7 col-sm-8">
+                <div class="single-services text-center mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
+                    <div class="services-icon">
+                        <img class="shape" src="assets/images/services-shape.svg" alt="shape">
+                        <img class="shape-1" src="assets/images/services-shape-2.svg" alt="shape">
+                        <i class="lni-cog"></i>
+                    </div>
+                    <div class="services-content mt-30">
+                        <h4 class="services-title"><a href="#">House 2</a></h4>
+                        <p class="text">Lorem ipsum dolor sit amet,consetetur sadipscing elitr, seddiam nonu eirmod
+                            tempor invidunt labore.</p>
+                        <a class="more" href="#">Learn More <i class="lni-chevron-right"></i></a>
+                    </div>
+                </div> <!-- single services -->
+            </div>
+            <div class="col-lg-4 col-md-7 col-sm-8">
+                <div class="single-services text-center mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.8s">
+                    <div class="services-icon">
+                        <img class="shape" src="assets/images/services-shape.svg" alt="shape">
+                        <img class="shape-1" src="assets/images/services-shape-3.svg" alt="shape">
+                        <i class="lni-bolt-alt"></i>
+                    </div>
+                    <div class="services-content mt-30">
+                        <h4 class="services-title"><a href="#">House 3</a></h4>
+                        <p class="text">Lorem ipsum dolor sit amet,consetetur sadipscing elitr, seddiam nonu eirmod
+                            tempor invidunt labore.</p>
+                        <a class="more" href="#">Learn More <i class="lni-chevron-right"></i></a>
+                    </div>
+                </div> <!-- single services -->
+            </div>
+        </div> <!-- row -->
+    </div> <!-- container -->
+</section>
+
+<!--====== BEST SELLERS PART ENDS ======-->
+
+<!--====== FILTERS PART START ======-->
+
+<section id="team" class="team-area pt-120">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-5">
+                <div class="section-title text-center pb-30">
+                    <div class="line m-auto"></div>
+                    <h3 class="title"><span>All the options you can imagine, </span> know each one of them</h3>
+                </div> <!-- section title -->
+            </div>
+        </div> <!-- row -->
+        <br />
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3 class="title">Type</h3>
+                    <li><a data-value="option1"><input type="checkbox" />&nbsp;House</a></li>
+                    <li><a data-value="option1"><input type="checkbox" />&nbsp;Apartment</a></li>
+                    <li><a data-value="option1"><input type="checkbox" />&nbsp;Country House</a></li>
+                </div>
+                <div class="col-lg-12">
+                    <h3 class="title">City</h3>
+                    <select class="form-select" data-toggle="dropdown" aria-label="Default select example">
+                        <option selected>City</option>
+                        <option type="checkbox">House</option>
+                        <option value="2">Apartment</option>
+                        <option value="3">Country house</option>
+                    </select>
+                </div>
+                <h3 class="title">Price</h3>
+                <input type="range" class="form-range" min="0" max="200000000" id="customRange2">
+            </div>
+        </div>
+
+    </div> <!-- container -->
+</section>
+<br>
+<!--====== FILTERS PART ENDS ======-->
+
+<!--====== LIST PART START ======-->
+<br>
+
+<div class="container">
+    <div class="row justify-content-center">
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+        <th scope="col">Address</th>
+        <th scope="col">City</th>
+        <th scope="col">Rooms</th>
+        <th scope="col">Floors</th>
+        <th scope="col">Bathrooms</th>
+        <th scope="col">Price</th>
+        <th scope="col">Garage</th>
+        <th scope="col">Dimensions</th>
+        <th scope="col">Stratum</th>
+        <th scope="col">Antiquity</th>
+        <th scope="col">Agent</th>
+        <th scope="col">More...</th>
+      </tr>
+    </thead>
+
+    <tbody *ngIf="products && products.length > 0">
+      <tr *ngFor="let item of products">
+        <td>{{item.type}}</td>
+        <td>{{item.address}}</td>
+        <td>{{item.city}}</td>
+        <td>{{item.rooms}}</td>
+        <td>{{item.floors}}</td>
+        <td>{{item.bathrooms}}</td>
+        <td>{{item.price}}</td>
+        <td>{{item.garage}}</td>
+        <td>{{item.dimensions}}</td>
+        <td>{{item.stratum}}</td>
+        <td>{{item.antiquity}}</td>
+        <td>{{item.agent}}</td>
+        <td><button class="btn btn-primary">Contact</button></td>
+      </tr>
+    </tbody> 
+  </table>
+  </div>
+  </div>
+  <!--====== LIST PART END ======-->
