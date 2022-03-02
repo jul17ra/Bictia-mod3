@@ -5,7 +5,7 @@ reservasctrl = require('../controllers/reservas.controller')
 
 router.post('/', reservasctrl.create)
 router.get('/', verificarToken, reservasctrl.list)
-/*router.delete('/:_id', userctrl.delete)
-router.put('/', userctrl.update) */
+/*router.delete('/:_id', userctrl.delete)*/
+router.put('/', reservasctrl.update)
 
 module.exports = router

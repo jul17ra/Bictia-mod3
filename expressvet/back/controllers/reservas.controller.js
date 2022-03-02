@@ -1,3 +1,7 @@
+const reservas = require("../models/reservas");
+var uuid = require('node-uuid');
+
+
 const ctrlreservas = {},
   Reservas = require("../models/reservas");
 
@@ -7,16 +11,14 @@ ctrlreservas.create = async (req, res) => {
     name: req.body.name,
     personal_id: req.body.personal_id,
     date: req.body.date,
-    reservation_id: req.body.reservation_id,
-    description: req.body.description,
-    state: req.body.state,
-    state_comment: req.body.state_comment
+    reservation_id: uuid.v4(),
+    description: req.body.description
   });
   await newreservas.save();
   res.json({
     msg: "Reservation created successfully",
-    status: true  
-  });
+    status: true
+  })
 };
 
 ctrlreservas.list = async (req, res) => {
@@ -25,18 +27,22 @@ ctrlreservas.list = async (req, res) => {
     res.json(reservas);
 };
 
-/*ctrlcompany.update = async (req, res) => {
-    const { _id, company, } = req.body;
-    await Company.findOneAndUpdate(
-      { _id: _id },
+ctrlreservas.update = async (req, res) => {
+    const { reservation_id, comentario, state, comment, } = req.body;
+    await Reservas.findOneAndUpdate(
+      { reservation_id: reservation_id },
       { 
-        company: company,
+        state: "Cancelada",
+        comment:{
+          comment_state: comentario,
+          comment_date: Date.now() - 5*60*60*1000
+        },
       }
     );
-    res.json({ status: true });
+    res.json({ "msg":"Canceled" });
 };
 
-ctrlcompany.delete = async (req, res) => {
+/*ctrlcompany.delete = async (req, res) => {
     const { _id } = req.params;
     await Company.deleteOne({ _id: _id });
     res.json({ status: true });
