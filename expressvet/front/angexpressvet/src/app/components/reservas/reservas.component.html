@@ -1,0 +1,35 @@
+            <!-- FORMULARIO -->
+            <form id="services" class="was-validated features-area container" [formGroup]="formreservas">
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1 validationTextarea" class="form-label">Nombre*</label>
+                    <input type="text" class="form-control in-invalid" id="exampleFormControlInput1 validationTextarea" required formControlName="name">
+                    <div class="invalid-feedback">
+                        Ingrese su nombre.
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1 validationTextarea" class="form-label">Cédula*</label>
+                    <input type="email" class="form-control in-invalid" id="exampleFormControlInput1 validationTextarea" required formControlName="personal_id">
+                    <div class="invalid-feedback">
+                        Ingrese su número de identificación.
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1 validationTextarea" class="form-label">Fecha*</label>
+                    <input type="number" class="form-control in-invalid" id="exampleFormControlInput1 validationTextarea" required formControlName="date">
+                    <div class="invalid-feedback">
+                        Ingrese la fecha que desea para su cita.
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1 validationTextarea" class="form-label">Descripción*</label>
+                    <input type="text" class="form-control in-invalid" id="exampleFormControlInput1 validationTextarea" required formControlName="description">
+                    <div class="invalid-feedback">
+                        Describe la razón de la consulta y principales síntomas.
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <button class="btn btn-primary" type="submit" (click)=validar()>Reservar</button>
+                </div>
+                
+            </form>
